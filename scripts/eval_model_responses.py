@@ -33,6 +33,7 @@ MODELS = [
     "qwen3-32b",
     "qwen3-8b",
     "o3-mini-2025-01-31",
+    "gpt-5-2025-08-07"
 ]
 
 NONHUMAN_MODELS = MODELS[1:]
@@ -53,7 +54,7 @@ def main():
 
     if args.validity_threshold is not None:
         for model in MODELS:
-            df = response_validation(df, model, args.validity_threshold)
+            df = response_validation(df, model, args.validity_threshold, books_sentences)
             print("")
 
     for model in NONHUMAN_MODELS:

@@ -1,6 +1,6 @@
 from rapidfuzz import fuzz, utils
 
-def response_validation(df, model, threshold):
+def response_validation(df, model, threshold, book_sentences):
     resp_col = f"response_{model}"
     err_col  = f"response_{model}_ERROR"
 
@@ -69,7 +69,6 @@ def correctness_evaluation(df, model, threshold, filter_col=None):
 
         if has_response and err is None:
             total_valid += 1
-
             length_ratios.append(len(model_response) / len(ground_truth))
 
             score = fuzz.partial_ratio(
