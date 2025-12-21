@@ -1,3 +1,4 @@
+import pandas as pd
 from rapidfuzz import fuzz, utils
 
 def response_validation(df, model, threshold, book_sentences):
@@ -54,6 +55,11 @@ def correctness_evaluation(df, model, threshold, filter_col=None):
     err_col  = f"response_{model}_ERROR"
     corr_col = f"correctness_{model}_FUZZY_MATCH"
 
+    # 确保存在错误列，避免后续 KeyError
+    if err_col not in df.columns:
+        df[err_col] = None
+        results_df[err_col] = None
+
     length_ratios = []
     correctness_counts = {True: 0, False: 0}
     total_valid = 0
@@ -63,11 +69,11 @@ def correctness_evaluation(df, model, threshold, filter_col=None):
             continue
         ground_truth   = row["answer_quote_text"]
         model_response = row[resp_col]
-        err            = row[err_col]
+        err            = row.get(err_col, None)
 
-        has_response = bool(model_response) 
+        has_response = isinstance(model_response, str) and model_response.strip() != ""
 
-        if has_response and err is None:
+        if has_response and (err is None or pd.isna(err)):
             total_valid += 1
             length_ratios.append(len(model_response) / len(ground_truth))
 
@@ -93,6 +99,9 @@ def correctness_evaluation(df, model, threshold, filter_col=None):
         print(f"Model: {model}, DataFrame is empty.")
     else:
         print(f"Model: {model}, Accuracy: {correctness_counts[True]}/{n} ({correctness_counts[True]/n*100:.1f}%)")
-        print(f"Model: {model}, Average length ratio: {sum(length_ratios)/len(length_ratios):.1f}")
+        if length_ratios:
+            print(f"Model: {model}, Average length ratio: {sum(length_ratios)/len(length_ratios):.1f}")
+        else:
+            print(f"Model: {model}, Average length ratio: N/A (no valid matches)")
 
     return results_df

@@ -1,8 +1,23 @@
 #!/usr/bin/env python3
 """
-Evaluation script to replicate ACL paper results.
-Takes a JSON file containing evaluation data as a command-line argument.
+Module: eval_model_responses
+Purpose: Evaluate model outputs on the RELiC dataset, replicating ACL paper results.
+
+What it does:
+    - (Optional) Validity check: verify model responses exist in the primary source (books JSON)
+    - Correctness evaluation: fuzzy-match responses to ground truth quotes
+    - Supports full set, human_eval_set, and close_reading_example subsets
+
+CLI Usage:
+    python scripts/eval_model_responses.py \
+        --input_path tests/output/output_task1_test.csv \
+        --output_path tests/output/output_task1_test_results.csv \
+        --books_sentences_path data/relic_book_sentences_aeneid.json \
+        --correctness_threshold 80
+        --validity_threshold 95 
 """
+
+
 
 import argparse
 import pandas as pd
@@ -13,33 +28,9 @@ from pathlib import Path
 from utils import response_validation, correctness_evaluation
 
 MODELS = [
-    "human",
-    "simple_gemini-2.5-pro-preview-05-06",
-    "simple_o3-2025-04-16",
-    "simple_gemini-1.5-pro",
-    "simple_o1-2024-12-17",
-    "simple_gpt-4o-2024-11-20",
-    "simple_qwen2.5-72b-instruct",
-    "simple_llama-3.1-8b-instruct",
-    "simple_qwen2.5-7b-instruct",
-    "simple_llama-3.3-70b-instruct",
-    "gemini-2.5-pro-preview-05-06",
-    "gpt-4.1-2025-04-14",
-    "o3-2025-04-16",
-    "gemini-1.5-pro",
-    "claude-3-7-sonnet-20250219",
-    "deepseek-r1",
-    "gpt-4o-2024-11-20",
-    "qwen3-32b",
-    "qwen3-8b",
-    "o3-mini-2025-01-31",
-    "gpt-5-2025-08-07",
-    "simple_gpt-5-2025-08-07",
-    "simple_gpt-5.1-2025-11-13",
-    "gpt-5.1-2025-11-13"
+ "anthropic_claude-sonnet-4.5_task1_v1_text_simple_text",
+ "deepseek_deepseek-v3.2_task1_v1_text_simple_text"
 ]
-
-NONHUMAN_MODELS = MODELS[1:]
 
 
 def main():
@@ -53,26 +44,35 @@ def main():
 
     df = pd.read_csv(args.input_path)
     df = df.astype(object).where(df.notna(), None)
+
+    # 根据输入文件实际 response 列自动推断模型名（去掉前缀 response_）
+    model_cols = [
+        c for c in df.columns
+        if c.startswith("response_") and not c.endswith("_ERROR")
+    ]
+    models = [c[len("response_"):] for c in model_cols] or MODELS
+    nonhuman_models = models
+
     books_sentences = json.load(open(args.books_sentences_path))
 
     if args.validity_threshold is not None:
-        for model in MODELS:
+        for model in models:
             df = response_validation(df, model, args.validity_threshold, books_sentences)
             print("")
 
-    for model in NONHUMAN_MODELS:
+    for model in nonhuman_models:
         df = correctness_evaluation(df, model, args.correctness_threshold)
         print("")
 
     print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
     print("HUMAN EVAL SET (n=40):")
-    for model in MODELS:
+    for model in models:
         df = correctness_evaluation(df, model, args.correctness_threshold, "human_eval_set")
         print("")
 
     print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
     print("CLOSE READING EXAMPLES (n=39):")
-    for model in NONHUMAN_MODELS:
+    for model in nonhuman_models:
         df = correctness_evaluation(df, model, args.correctness_threshold, "close_reading_example")
         print("")
 

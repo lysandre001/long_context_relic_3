@@ -1,2 +1,6 @@
 pandas
 rapidfuzz
+openai
+tqdm
+tenacity
+python-dotenv
