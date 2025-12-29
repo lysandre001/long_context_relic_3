@@ -1,0 +1,14 @@
+{
+    "run_id": "run_20251228_231051_30132",
+    "timestamp": "20251228_231051",
+    "input_path": "data/Aeneid_commentary_Servius_sampled50.csv",
+    "books_path": "data/relic_book_sentences_aeneid.json",
+    "limit": 50,
+    "temperature": 0.1,
+    "max_tokens": 50000,
+    "timeout": 60,
+    "models": [
+  "anthropic/claude-sonnet-4.5",
+  "deepseek/deepseek-v3.2"
+]
+}

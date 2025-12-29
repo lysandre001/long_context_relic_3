@@ -5,6 +5,8 @@ Purpose: Run model inference on the RELiC long-context dataset via OpenRouter, w
          versioning and task modes:
          - Task 1: with full book context (uses books JSON)
          - Task 2: without book context (parametric knowledge)
+         - Task 3: line-number prediction with full book context and line numbers
+         - Task 4: line-number prediction without book context
 
 Key features:
     - Prompt registry driven (see scripts/prompts.py) with versioning
@@ -21,15 +23,6 @@ CLI Usage (examples):
         --prompt_version v1 \
         --limit 5
 
-    # Task 1, prompt v2_cot, with book context
-    python scripts/run_inference.py \
-        --input_path data/long_context_relic_acl.csv \
-        --output_path data/output.csv \
-        --books_path data/relic_book_sentences_acl.json \
-        --model anthropic/claude-3.5-sonnet \
-        --task 1 \
-        --prompt_version v2_cot \
-        --limit 5
 """
 import asyncio
 import argparse
@@ -91,9 +84,24 @@ def construct_prompt(row, task_type, prompt_version, books_data=None):
         if not books_data or normalized_book_key not in books_data:
             raise ValueError(f"Book content for '{book_title}' not found in provided JSON.")
         book_sentences = " ".join(books_data[normalized_book_key])
+        book_sentences_with_line_numbers = None
+    elif task_type == 3:
+        if not books_data or normalized_book_key not in books_data:
+            raise ValueError(f"Book content for '{book_title}' not found in provided JSON.")
+        book_lines = books_data[normalized_book_key]
+        # 传统行号从 1 开始，格式：数字和内容之间一个空格，无冒号
+        book_sentences_with_line_numbers = "\n".join(
+            f"{i+1} {line}" for i, line in enumerate(book_lines)
+        )
+        book_sentences = book_sentences_with_line_numbers
+    elif task_type == 4:
+        # Task 4: Line number prediction without context (parametric knowledge)
+        book_sentences = ""
+        book_sentences_with_line_numbers = None
     else:
         # Task 2 uses no external book context; keep placeholder empty
         book_sentences = ""
+        book_sentences_with_line_numbers = None
 
     book_title_snake_case = normalized_book_key
 
@@ -103,6 +111,8 @@ def construct_prompt(row, task_type, prompt_version, books_data=None):
         "lit_analysis_excerpt": lit_analysis_excerpt,
         "book_title_snake_case": book_title_snake_case,
     }
+    if task_type == 3:
+        format_kwargs["book_sentences_with_line_numbers"] = book_sentences_with_line_numbers
 
     return template.format(**format_kwargs)
 
@@ -240,9 +250,9 @@ async def main_async():
     parser = argparse.ArgumentParser(description="Run LLM inference on literary data via OpenRouter/OpenAI API.")
     parser.add_argument("--input_path", "-i", type=str, required=True, help="Path to input CSV file.")
     parser.add_argument("--raw_log_path", "-rl", type=str, required=True, help="Path to append raw JSONL logs.")
-    parser.add_argument("--books_path", "-b", type=str, help="Path to JSON file containing book sentences (Required for Task 1).")
+    parser.add_argument("--books_path", "-b", type=str, help="Path to JSON file containing book sentences (Required for Task 1 and Task 3).")
     parser.add_argument("--model", "-m", type=str, required=True, help="Model name (e.g., openai/gpt-4o, anthropic/claude-3-opus).")
-    parser.add_argument("--task", "-t", type=int, choices=[1, 2], required=True, help="Task type: 1 (With Book Context), 2 (No Book Context).")
+    parser.add_argument("--task", "-t", type=int, choices=[1, 2, 3, 4], required=True, help="Task type: 1 (With Book Context), 2 (No Book Context), 3 (Line Number Prediction), 4 (Line Number Prediction without Context).")
     parser.add_argument("--prompt_version", "-pv", type=str, default="v1", help="Version of the prompt to use (defined in scripts/prompts.py). Default: v1")
     parser.add_argument("--concurrency", "-c", type=int, default=5, help="Number of concurrent API requests.")
     parser.add_argument("--limit", type=int, default=None, help="Limit number of rows to process (for testing).")
@@ -266,11 +276,11 @@ async def main_async():
         logger.error(f"Input file {args.input_path} not found.")
         sys.exit(1)
 
-    # 3. Load Books (Task 1 only)
+    # 3. Load Books (Task 1 and Task 3 only)
     books_data = None
-    if args.task == 1:
+    if args.task in (1, 3):
         if not args.books_path:
-            logger.error("Task 1 requires --books_path to be specified.")
+            logger.error(f"Task {args.task} requires --books_path to be specified.")
             sys.exit(1)
         logger.info(f"Loading books data from {args.books_path}...")
         try:

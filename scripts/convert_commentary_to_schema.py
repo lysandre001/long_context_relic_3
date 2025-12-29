@@ -2,7 +2,8 @@
 将注释 CSV 转换为指定评测字段格式。
 
 输入字段（源文件列名假设与示例一致）：
-- Lemma
+- Lemma（正常情况）
+- True Lemma / Fake Lemma（特殊情况，如 Conington）
 - Comment
 - Book 或 Aeneid_book
 - Line
@@ -11,10 +12,10 @@
 
 输出字段：
 - uuid: 随机 8 位数字
-- book_title: Aeneid_<Book>
+- book_title: aeneid_book<Book>（与 relic_book_sentences_aeneid.json 的键一致）
 - commenter: 由输入文件名最后一段（去扩展名）推断
 - Full_Mask_comment: 源 Full_Mask
-- answer_quote_text: 源 Lemma
+- answer_quote_text: 优先 Lemma，若无则取 True Lemma，再无则取 Fake Lemma
 - answer_quote_idx: 源 Line
 - num_sents: answer_quote_text 句子数（以 .?! 分割，至少 1）
 - close_reading_example, explanation_human, human_eval_set: 留空
@@ -67,8 +68,14 @@ def convert(input_path: Path, output_path: Path) -> None:
 
         for row in reader:
             book_num = row.get("Book") or row.get("Aeneid_book") or ""
-            book_title = f"Aeneid_{book_num}" if book_num != "" else ""
-            answer_text = row.get("Lemma", "")
+            # 格式与 relic_book_sentences_aeneid.json 的键一致：aeneid_book1, aeneid_book2, ...
+            book_title = f"aeneid_book{book_num}" if book_num != "" else ""
+            # 优先 Lemma，若无则取 True Lemma，再无则取 Fake Lemma
+            answer_text = row.get("Lemma", "").strip()
+            if not answer_text:
+                answer_text = row.get("True Lemma", "").strip()
+            if not answer_text:
+                answer_text = row.get("Fake Lemma", "").strip()
 
             out_row = {
                 "uuid": f"{random.randint(0, 99_999_999):08d}",

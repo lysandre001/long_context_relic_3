@@ -1,0 +1,136 @@
+uuid,book_title,commenter,Full_Mask_comment,answer_quote_text,answer_quote_idx,num_sents,close_reading_example,explanation_human,human_eval_set,response_simple_anthropic_claude-sonnet-4.5_v1_text_text,response_simple_deepseek_deepseek-v3.2_v1_text_text,response_simple_anthropic_claude-sonnet-4.5_v1_text_text_ERROR,response_simple_deepseek_deepseek-v3.2_v1_text_text_ERROR,correctness_simple_anthropic_claude-sonnet-4.5_v1_text_text_FUZZY_MATCH,correctness_simple_deepseek_deepseek-v3.2_v1_text_text_FUZZY_MATCH
+41019663,aeneid_book3,Servius,"erili voluntate , non lege coniugii : vel quia inter captivos matrimonio fides non stabat : unde et 'MASK' dixit . et 'MASK', quia alii tradidit , quidam 'MASK' accipiunt .",TRANSMISIT HABENDAM,329,1,,,,seruitio enixae tulimus,"eripitur, superante manus, Creusa",Model generated window not found in primary source,Model generated window not found in primary source,,
+61003512,aeneid_book1,Servius,"proprie MASK dicuntur exitus fluminum , sed modo abusus est , quia plerumque MASK ipsa pro portu sunt .",OSTIA,400,1,,,,ostia,atque ostia sic fessi ponimus,,Model generated window not found in primary source,True,
+24527679,aeneid_book4,Servius,sic Aeolus “MASK MASK MASK MASK MASK MASK MASK“ .,TIBI FAS ANIMUM TEMPTARE PRECANDO,113,1,,,,Unable to locate Aeolus speaking in Aeneid Book 4; Aeolus appears in Book 1,Tuus o regina quid optes explorare labor,Model generated window not found in primary source,Model generated window not found in primary source,,
+76590588,aeneid_book2,Servius,"vel quia 'MASK' appellantur quae sunt in ministerio Iovis , quando morbos aut letum aut bellum hominibus molitur , quia in XII . ait “MASK MASK MASK MASK MASK“ .",APPARENT DIRAE FACIES,622,1,,,,dirae ultrices,Dirae caelum medio se sustulit axe,Model generated window not found in primary source,Model generated window not found in primary source,,
+7986276,aeneid_book9,Servius,"distinguendum , ut initium iuris iurandi sit 'MASK MASK MASK'.",NON,206,1,,,,"testor, ego, Ascanium",Sic me Dius amet,Model generated window not found in primary source,Model generated window not found in primary source,,
+65984520,aeneid_book11,Servius,qui a diis originem ducunt .,CUM GENTE DEORUM,305,1,,,,genus cui virtus divinaque origo,"bellum importunum, cives, cum gente deorum invictisque viris gerimus, qui bella fatigant, qui a diis originem ducunt",Model generated window not found in primary source,Model generated window not found in primary source,,
+41722738,aeneid_book12,Servius,"quidam pro 'MASK', alii pro 'MASK', ut “MASK MASK MASK MASK MASK“ .",SUPER,301,1,,,,uiribus aequis,vitaque cum gemitu fugit indignata sub umbras,Model generated window not found in primary source,,,False
+28547083,aeneid_book7,Servius,acyrologiam fecit commutando Ennii versum : nam ille ait “MASK MASK MASK MASK MASK“ .,RUPIT SATURNIA POSTES,622,1,,,,postquam res Asiae Priamique evertere gentem,mōribus antīquīs stat rēgna vīrīsque,Model generated window not found in primary source,Model generated window not found in primary source,,
+38876251,aeneid_book4,Servius,"id est , hoc vellem praecipue .",PRIMUM,342,1,,,,hoc unum,"id est, hoc vellem, praecipue",Model generated window not found in primary source,Model generated window not found in primary source,,
+81599950,aeneid_book10,Servius,id est castra Troianorum .,TROIAM,378,1,,,,Aeneadumque castra,"""id est castra Troianorum; hac iter ad regna.""",Model generated window not found in primary source,Model generated window not found in primary source,,
+24076009,aeneid_book3,Servius,"aperta ianua , per periphrasin .",VERSO CARDINE,448,1,,,,panditur interea domus omnipotentis Olympi,portā ianua Inferni,Model generated window not found in primary source,Model generated window not found in primary source,,
+94256236,aeneid_book8,Servius,"fatum saepe pro morte positum legitur , 'MASK' ergo letiferum .",FATIFERUMQUE ENSEM,621,1,,,,fatum crudum,fata,Model generated window not found in primary source,,,False
+68553774,aeneid_book5,Servius,"ordo est : iubet caedere MASK MASK , id est rite peragi sacrificium , et sic solvi MASK : sic in septimo “MASK MASK MASK MASK MASK“ , id est rite . 'MASK' autem quo naves ad terram ligantur .",SOLVIQUE EX ORDINE FUNEM,773,1,,,,bidentes et solvere funem,solvite crates,Model generated window not found in primary source,Model generated window not found in primary source,,
+17434163,aeneid_book6,Servius,"MASK “MASK MASK MASK MASK MASK“ . et hinc ostenditur quod diximus , iuncta esse haec tria : Acheronta , Stygem , Cocyton . de his autem nascuntur alia , unde est “MASK MASK MASK MASK MASK“ .",INDE UT STYGIA PROSPEXIT AB UNDA,385,1,,,,"hinc via Tartarei quae fert Acherontis ad undas.
+turbidus hic caeno vastaque voragine gurges
+aestuat atque omnem Cocyto eructat harenam.
+portitor has horrendus aquas et flumina servat
+terribili squalore Charon, cui plurima mento
+canities inculta iacet, stant lumina flamma,
+sordidus ex umeris nodo dependet amictus.
+ipse ratem conto subigit velisque ministrat
+et ferruginea subvectat corpora cumba,
+iam senior, sed cruda deo viridisque senectus.","Acherontis avari, Stygiamque paludem, dique severi Cocyti",,Model generated window not found in primary source,False,
+74640562,aeneid_book8,Servius,"unum vacat , aut 'MASK', aut 'MASK', ut “MASK MASK MASK MASK MASK MASK MASK“ : tale est et illud “MASK MASK MASK MASK“ .",POST HINC AD NAVES GRADITUR,546,1,,,,necdum etiam causae irarum saevique dolores,hinc Augustus agens Italos in proelia Caesar,Model generated window not found in primary source,,,False
+96585365,aeneid_book6,Servius,"obtineat , custodiat , inhabitet , ut “MASK MASK MASK MASK MASK MASK MASK“ .",SERVET,402,1,,,,portitor has horrendus aquas et flumina servat terribili squalore Charon,"Troiaque nunc staret, Priamique arx alta maneres",,Model generated window not found in primary source,False,
+6256800,aeneid_book1,Servius,"volubilibus , et est participium pro nomine . volvens enim est qui volvit , volubilis qui volvitur . anni autem volvuntur , non volvunt , ut est “MASK MASK MASK MASK MASK MASK MASK MASK“ . alii quia deficit lingua Latina participio praesenti passivo praesens activum positum volunt , ut “MASK MASK“ et “MASK MASK“ quae quassetur .",VOLVENTIBUS,234,1,,,,volvenda dies en attulit ultro. quassantque,volvendis per annos,Model generated window not found in primary source,Model generated window not found in primary source,,
+71119013,aeneid_book11,Servius,quantum ad mare pertinet : nam terrae prima est .,EXTREMAMQUE,626,1,,,,"illa vel intactae segetis per summa volaret gramina nec teneras cursu laesisset aristas, vel mare per medium fluctu suspensa tumenti ferret iter celeris nec tingeret aequore plantas.","quantum ad mare pertinet, Hesperium; terrae primum Italiae",Model generated window not found in primary source,Model generated window not found in primary source,,
+11608067,aeneid_book11,Servius,modo 'MASK'.,MUSSANT,454,1,,,,unum oro: liceat miseris dare tuta sepulcra,quae bella gerendo,Model generated window not found in primary source,Model generated window not found in primary source,,
+51741338,aeneid_book9,Servius,"per genetivum frequentius utimur hac figura , quam per ablativum . sane hic secutus veteres cuius rei MASK addidit , cum alibi subtraxerit , ut “MASK MASK MASK MASK“ et “MASK MASK MASK MASK MASK MASK“ .",DIVES EQUUM,26,1,,,,cuius in adventu,"""Anchisiades magni"" et ""magni Anchisiades""",Model generated window not found in primary source,Model generated window not found in primary source,,
+2496498,aeneid_book6,Servius,"'MASK MASK MASK' dicimus , non 'MASK MASK': quod qui dicunt decipiuntur propter 'MASK MASK MASK'.",INSISTERE LIMEN,563,1,,,,facilis descensus Averno,facilis descensus Averni:  noctes atque dies patet atri ianua Ditis;,,,False,False
+87044754,aeneid_book9,Servius,"ab hoc officio et ab hac audacia accessu temporis inferior non probabor , qualiscumque fortuna comitetur . id est numquam aut MASK secunda fortuna acciderit , aut MASK adversa , ut MASK MASK mei faciat , hoc est neque secundis intumescam , neque adversis deiciar .",ME NULLA DIES TAM FORTIBUS AVSIS DISSIMILEM ARGVERIT,279,1,,,,"dine hunc ardorem mentibus addunt,
+Euryale, an sua cuique deus fit dira cupido?
+aut pugnam aut aliquid iamdudum invadere magnum
+mens agitat mihi, nec placida contenta quiete est.
+cernis quae Rutulos habeat fiducia rerum:
+lumina rara micant, somno vinoque soluti
+procubuere, silent late loca.","non, si mihi Iuppiter auctor spondeat, hoc sperem",,Model generated window not found in primary source,False,
+86614466,aeneid_book7,Servius,"alibi per accusativum , ut “MASK MASK MASK MASK MASK MASK“ . et hoc secundum naturam est , nam 'MASK MASK MASK' dicimus : per dativum enim figuratum est .",MUROQUE SUBIBANT,161,1,,,,Italiam contra Tiberinaque longe ostia,et terram inter fluctus aperit,Model generated window not found in primary source,Model generated window not found in primary source,,
+92511118,aeneid_book5,Servius,id est inlustrabat .,INCENDEBAT,87,1,,,,inlustrabat,idemque inlustrabat,Model generated window not found in primary source,Model generated window not found in primary source,,
+7974537,aeneid_book4,Servius,"Proserpinam raptam a Dite patre Ceres cum incensis faculis MASK orbem terrarum requireret , MASK trivia eam vel quadrivia vocabat clamoribus . unde permansit in eius sacris , ut certis diebus MASK compita a matronis exerceatur ululatus , sicut in Isidis sacris , ubi est imitatio inventi Osiridis , quem dilaniatum a Typhone eius fratre uxor Isis MASK totum orbem requisisse narratur : Iuvenalis “MASK MASK MASK MASK MASK“ . Hecaten autem causa invocat ultionis . unde etiam furias vocat , sed usurpative modo diras dixit : nam 'MASK' in caelo sunt , ut “MASK MASK MASK MASK MASK“ : 'MASK' in terris , 'MASK' apud inferos : unde et tres esse dicuntur . sed haec nomina confundunt poetae . 'MASK' vero , hoc est Tisiphone : nam Graece MASK ultio dicitur . 'MASK' autem pro 'MASK MASK'. et est participium sine verbo , ut 'MASK'.",VLULATA PER URBES,609,1,,,,nocturnisque Hecate triviis ululata per urbes,"""Dirae"" caelo demittuntur ab alto.",,Model generated window not found in primary source,True,
+55532291,aeneid_book8,Servius,"mire sine patris auctoritate nihil confirmat , et tamen hospitem appellat .",NOSTRIS SUCCEDE PENATIBUS HOSPES,123,1,,,,"quae causa rates aut cuius egentes
+quove tenet cursus? si genus et proavos et quae fortuna sequaris
+fari potes, huc ades et mecum haec moenia adire memento,
+ne fuge hospitium: Teucros en accipe supplex
+et Pallas, Evandri natus, tibi tendit amicam
+dextram et Troianae iungit sua foedera genti.","‘fato profugus’ suspexit ‘et iste deus, qui
+vestrae tela fugae, iam pridem Ausonia fines
+et Lacedaemonios patrem sortitus Oenotros:
+idem ordo mihi. sed mea me virtus et sancta oracula divum
+cognatique patres, tua terris didita fama,
+coniunxere tibi et fatis egere volentem.
+Dardanus, Iliacae primus pater urbis et auctor,
+Electra, ut Grai perhibent, Atlantide cretus,
+advehitur Teucros; Electram maximus Atlas
+edidit, aetherios umero qui sustinet orbis.
+vobis Mercurius pater est, quem candida Maia
+Cyllenae gelido conceptum vertice fudit;
+at Maiam, si forte audis, eadem esse sororem
+Atlantis, qui caelum sidera tollit acuto;
+sic genus amborum scindit se sanguine ab uno.
+his fretus non legatos neque prima per artem
+temptamenta tui perigi; me, me ipse meumque
+obieci caput et supplex ad limina veni.
+idem gens eadem, quae te, crudelibus armis
+Ausoniis, persequitur; si respuimur, nihil est
+quod supersit, quibus exercere quietem
+terris Occiduis mediaque ab sede profectis.
+auditi et tellus et multa priora vetustas
+te genus a magno suspensum numine divum
+progenitum; flecte animos, teque adspergere nostris
+(nec vereor) fatis et rumpe moras. nos eadem
+Troia antiqua manet, tot per saecula testem
+sortis eiusdem, tot iam labentibus annis.
+per tela, per socios (et spes haec sola timorem
+firmat) obtestor: non me patris Anchisae,
+non Venus alma fuit, tua numina quippe tueri
+ausus, et ad limina, regem, te, nostra, vocavi.’",Model generated window not found in primary source,Model generated window not found in primary source,,
+15760406,aeneid_book2,Servius,"bene excusat , ne reus sit conscientiae .",EA FAMA VAGATUR,17,1,,,,"feror huc, illuc varia per pectora versor","“sacra suosque tibi commendat Troia penatis; hos cape fatorum comites, his moenia quaere magna, pererrato statues quae denique ponto.”",Model generated window not found in primary source,,,False
+70108395,aeneid_book12,Servius,"per transitum historiae usus est verbis ; nam qui MASK exercitu relaxantur , MASK MASK dicuntur dimitti : Sallustius de Oppio , ubi eum Cotta in contione MASK exercitu cogit abscedere , dicit , “MASK MASK MASK MASK MASK MASK MASK MASK MASK MASK“ .",DIMITTERE AB ARMIS,844,1,,,,dimittite cunctos,absiste manum committere Teucris,Model generated window not found in primary source,Model generated window not found in primary source,,
+82275314,aeneid_book4,Servius,Sol : unus enim de Titanibus Hyperionis filius contra Iovem non fecit .,TITAN,119,1,,,,"Sol, qui terrarum flammis opera omnia lustras","Sol, qui terrarum flammis opera omnia lustras, tuque harum interpres curarum et conscia Iuno, noctisque et noctis signa orientia testor,",,Model generated window not found in primary source,False,
+20052901,aeneid_book6,Servius,"id est Terrae : nam , ut supra diximus , nihil est aliud nox nisi umbra terrarum .",MAGNAEQUE SORORI,250,1,,,,Nox et Chaos et Tartara tenta,,Model generated window not found in primary source,,,
+81594594,aeneid_book12,Servius,"hypallage est pro 'MASK MASK MASK MASK MASK'. movebatur autem , intellegens se esse tantorum causam malorum , sicut supra ipse “MASK MASK MASK MASK MASK MASK MASK“ .",IGNEM SUBIECIT RUBOR,66,1,,,,me me adsum qui feci in me convertite ferrum,"me, me, adsum qui feci, in me convertite ferrum, o Rutuli! mea fraus omnis",Model generated window not found in primary source,Model generated window not found in primary source,,
+6586142,aeneid_book3,Servius,"promunctorium Siciliae est secundum Sallustium , dictum a gubernatore Hannibalis illic sepulto , qui fuerat occisus per regis ignorantiam , cum se eius dolo propter angustias freti crederet esse deceptum , veniens de Petilia : quamquam legerimus , etiam ante Pelorum dictum .",PELORI,411,1,,,,,,,,,
+45816712,aeneid_book5,Servius,"non tantum heroicum est quod dat Aeneae gubernandi scientiam , sed etiam ad prooeconomiam pertinet : dicturus enim est “MASK MASK MASK MASK MASK MASK MASK“ .",IAMDUDUM,27,1,,,,"caelo te tantum, Palinure, fidebam,
+infelix! nudus in ignota, Palinure, iacebis
+harena",litora curva pete,Model generated window not found in primary source,Model generated window not found in primary source,,
+47326229,aeneid_book8,Servius,"epulae deorum propriae , ut Iovis cena .",DAPES,175,1,,,,dapibus mensisque repostis,epulae deorum propriae,Model generated window not found in primary source,Model generated window not found in primary source,,
+90110704,aeneid_book10,Servius,sicut Mezentius odiorum et telorum totius exercitus .,CAELIQUE MARISQUE,695,1,,,,"unus in arma ruit, totius que agmina contra","haud aliter iustae quibus est Mezentius irae, non ulli est animus stricto concurrere ferro, sed missilibus longe et vasto clamore lacessunt.",Model generated window not found in primary source,,,False
+90566941,aeneid_book8,Servius,"crimen Antonii , quod MASK MASK Romanus pugnet .",OPE BARBARICA,685,1,,,,sequiturque (nefas) Aegyptia coniunx,sequiturque (nefas) Aegyptia coniunx,,,False,False
+44662245,aeneid_book2,Servius,"non aliter . dicebant veteres 'MASK' et 'MASK', unde et 'MASK'.",HAVD SECUS,382,1,,,,non aliter,timeo Danaos et dona ferentis,Model generated window not found in primary source,,,False
+97453119,aeneid_book5,Servius,bene rem notam per transitum tetigit : agonalis enim moris fuerat post sacrificia ad certamen venire .,CAESIS UT FORTE IVVENCIS,329,1,,,,"Haec ubi deflevit, taurum mactabat honori
+Neptuni, taurum Apollini, nigram Hiemali,
+albam Zephyris, equum Oceano.
+Postera vix summos spargebat lumine montis
+orta dies, cum iam ex omni certamine cives
+convenere loco.","postquam exempta fames et amor compressus edendi,",Model generated window not found in primary source,Model generated window not found in primary source,,
+30754165,aeneid_book7,Servius,"non mirum si sacrilegus et contemptor deorum contra piam gentem prior arma corripuit . et scienda est poetae adfectatio — nam ablepsiam nefas est dicere — hic enim aliquos commemorat , quos in bello non invenis , item in sequentibus aliquos invenimus , quorum hic nullam fecit commemorationem .",PRIMUS INIT BELLUM,647,1,,,,"at Mezentius, contemptor divum","nec Tiburtia muros
+nomina gentis habent, nec tu, maxime Tiburtu,
+inventor, nec frater tibi, lucide Catreu,
+interitus. geminosque pari de stirpe creatos,
+Coram et Catillus, fortisque ad bella coegit
+Argiva iuventus, patrisque ex agmine regis
+qui Veiens, qui deinde Sabinus,
+arator, regem in Alba, cum fascibus, Curibusque
+ille severis, et te, Anxure, minacem,
+et te, Amate, idem.",Model generated window not found in primary source,Model generated window not found in primary source,,
+77855676,aeneid_book1,Servius,"aut ordo est 'MASK MASK MASK MASK MASK MASK MASK MASK MASK MASK'. et usus est hoc genere elocutionis , quo et Terentius , qui dixit “MASK MASK MASK MASK MASK“ . atqui nihil tam contrarium ; omnes enim generale est , plerique speciale : ordo ergo est , quod omnes faciunt adulescentuli , ut animum ad aliquod studium adiungant , plerique equos alere , plerique canes . aut certe 'MASK' vacat , ut superius diximus istas frequenter vacare particulas , ut ipse Vergilius “MASK MASK MASK MASK MASK MASK MASK MASK MASK MASK“ . nemo enim dicit 'MASK MASK MASK', sed 'MASK MASK': vacat ergo 'MASK'. item in Lucilio “MASK MASK MASK MASK“ 'MASK' vacat , nam de uno loquebatur . ergo 'MASK MASK MASK' pro 'MASK MASK' posuit , cui contrarium ponebant veteres 'MASK', id est 'MASK MASK MASK' 'MASK MASK' pro 'MASK MASK'. sane legitur et 'MASK MASK', ut sit 'MASK MASK MASK'.",ANTHEA SI QUEM,181,1,,,,non omnis eadem mirantur amantque,vocabitur hic quoque votis aut famam et fata nepotum aspera tum,Model generated window not found in primary source,Model generated window not found in primary source,,
+33454479,aeneid_book3,Servius,pro postquam ; et est temporis adverbium .,AST UBI,410,1,,,,pro postquam,prosequitur surgens a puppi ventus euntis,Model generated window not found in primary source,,,False
+66256628,aeneid_book7,Servius,"legitur in arte quod 'MASK MASK MASK MASK MASK' positivo tantum iungantur : quod tamen tunc observatur si ponantur ad augmentum istae particulae ; tunc enim vitiosam faciunt elocutionem . ceterum si ad exaequationem positae sint , possunt vel comparativo vel superlativo vel pro his gradibus ipsae inter se iungi : hinc ergo est 'MASK MASK MASK MASK MASK MASK MASK MASK MASK MASK MASK MASK MASK MASK MASK': non enim ad praelationem positae sunt , sed ad exaequationem . maiores enim nostri vitia non in dicto , sed in significatione esse voluerunt . hinc est in Sallustio “MASK MASK MASK MASK MASK MASK MASK MASK MASK MASK“ : nam MASK hic exaequatio est , non comparatio .",TAM MAGIS ILLA FREMENS ET TRISTIBUS EFFERA FLAMMIS QUAM MAGIS EFFVSO CRVDESCUNT SANGUINE PUGNAE,787,1,,,,"quo iustior alter nec pietate fuit, nec bello maior et armis",magis ille tremens oculisque ardentibus ambit magis quam ferro magis quam tela timendus,Model generated window not found in primary source,Model generated window not found in primary source,,
+20411055,aeneid_book10,Servius,"crudelem , cruentum .",CRUDUM,682,1,,,,crudelem Mezentium,...,Model generated window not found in primary source,Model generated window not found in primary source,,
+71929677,aeneid_book11,Servius,"Probus aut cespite aut 'MASK' pro campo , scilicet quod caespes gleba sit .",CAESPITE,566,1,,,,gleba,pro campo,Model generated window not found in primary source,Model generated window not found in primary source,,
+65767624,aeneid_book10,Servius,officium .,OPUS,469,1,,,,officium,"'hoc precor, oro, unum miserere parentis,
+et te, si qua pii s est caelesti numine cura,
+talem oro genitorem parere. nos tibi, nos
+patriaeque tuae, pulchra Lausus tegebat
+corpora. nos saevo multum te credidimus hosti.
+da corpus tumulo et consorti semine terrae.
+ne, quaeso, ius hoc animo sine, quod cumque meremur,
+quin etiam miserum audebis nomen amici
+hoc solum, et saevi contemnis munera Martis?
+occidit, occideritque sinas cum sanguine Turni.
+hoc erat, alma parens, quod me per tela, per ignis
+eripis, ut medii s hostem in penetralibus utque
+Ascanium patremque meum iuxtaque Creusam
+alterum in alterius mactatos sanguine cernam?
+da, pater, hoc nostris aboleri dedecus armis,
+hoc iuveni, et tecum, tua, si qua est, gloria, cedat.
+nullum in caede nefas, nec sic ad proelia veni,
+nec tecum hos mactare paro; da fata parenti,
+et mea.'",Model generated window not found in primary source,Model generated window not found in primary source,,
+74048499,aeneid_book6,Servius,"secundum Atticam linguam genetivus singularis Graecus est , cum ipse alibi “MASK MASK“ . quidam tamen hic subaudiunt 'MASK', id est pinxit , ut Horatius “MASK MASK MASK MASK MASK MASK MASK MASK MASK MASK MASK MASK MASK MASK MASK MASK MASK MASK MASK“ . sane non nulli hunc Androgeum non ita , quemadmodum supra dictum est , insidiis occisum , sed a Marathonio tauro , qui flammas vomere dicebatur , conflagratum tradunt .",LETUM ANDROGEO,20,1,,,,Androgeoae,Androgeique; umeris nec non et pectore nudis,Model generated window not found in primary source,Model generated window not found in primary source,,
+29250959,aeneid_book2,Servius,ubi exercitus sit 'MASK' dicuntur : unde est “MASK MASK MASK MASK MASK MASK MASK“ .,CASTRA,462,1,,,,"quidnam optent, quid iam possint obsistere Teucri",Tenedos tranquilla per alta (horresco referens),Model generated window not found in primary source,,,False
+27064518,aeneid_book9,Servius,id est semper militamus .,CANITIEM GALEA PREMIMUS,609,1,,,,nos bello e tanto diuersi et Marte uagamur,"bellum, o terra hospita, portas",Model generated window not found in primary source,Model generated window not found in primary source,,
+22775265,aeneid_book12,Servius,"apud maiores orichalcum pretiosius metallis omnibus fuit : namque sicut Lucretius dicit , cum primum homines silvas incendissent , nullarum adhuc rerum periti , terra casu fertilis omnium , ex incendii calore desudavit metalla , inter quae orichalcum pretiosius visum est , quod et splendorem auri et aeris duritiam possideret . namque primum de auro securis facta displicuit causa mollitiae ; simili ratione et argenti contemptus est usus , mox aeris ; orichalcum placuit , donec veniretur ad ferrum : unde etiam saecula ita dicuntur fuisse divisa . orichalcum autem fuisse pretiosum etiam Plautus docet , qui ait in Milite Glorioso “MASK MASK MASK MASK MASK MASK“ .",ALBOQUE ORICHALCO,87,1,,,,et laevis ocreas electro auroque recocto,aurea aetas aureus orichalcum,Model generated window not found in primary source,Model generated window not found in primary source,,
+6175054,aeneid_book1,Servius,id est quomodo .,QUA,676,1,,,,Unable to determine without sufficient context from the literary analysis excerpt and access to the full text of Aeneid Book 1,id est nati fratrum,Model generated window not found in primary source,Model generated window not found in primary source,,
